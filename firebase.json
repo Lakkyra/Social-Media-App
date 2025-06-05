@@ -1,0 +1,37 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "socialinsta-f7e11",
+          "appId": "1:888512336232:android:a218997c8f60cbaf98c6dd",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "socialinsta-f7e11",
+          "configurations": {
+            "android": "1:888512336232:android:a218997c8f60cbaf98c6dd",
+            "ios": "1:888512336232:ios:728eaa72d57e285e98c6dd",
+            "web": "1:888512336232:web:eefcafa8825de8ea98c6dd"
+          }
+        }
+      }
+    }
+  },
+  "hosting": {
+    "public": "build/web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
