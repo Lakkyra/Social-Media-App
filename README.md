@@ -19,8 +19,6 @@ Then run this on the terminal from the root of this project:
 - Run `firebase login` so you have access to the Firebase project you have created
 - Run `flutterfire configure` and follow all the steps
 
-
-
 ### 2. Manual way (not recommended)
 
 If you don't want to use FlutterFire CLI, follow these steps instead:
@@ -30,5 +28,12 @@ If you don't want to use FlutterFire CLI, follow these steps instead:
 - then, [download and copy](https://firebase.google.com/docs/flutter/setup#configure_an_android_app) `google-services.json` into `android/app`.
 - On iOS, use `com.example.starterArchitectureFlutterFirebase` as the bundle ID.
 - then, [download and copy](https://firebase.google.com/docs/flutter/setup#configure_an_ios_app) `GoogleService-Info.plist` into `iOS/Runner`, and add it to the Runner target in Xcode.
+
+## Setting up environment variables
+
+In your root folder , create a .env file and these variables
+CLOUDINARY_CLOUD_NAME=your cloud name
+CLOUDINARY_API_KEY=your api key
+CLOUDINARY_SECRET_KEY=your secret key
 
 That's it. Have fun!
