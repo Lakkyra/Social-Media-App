@@ -23,7 +23,7 @@ jobs:
 
       - name: create and Debug .env file
         run: |
-          mkdir -p assets
+
           echo "CLOUDINARY_API_KEY=${{ secrets.CLOUDINARY_API_KEY }}" >> .env
           echo "CLOUDINARY_SECRET_KEY=${{ secrets.CLOUDINARY_SECRET_KEY }}" >> .env
           echo "CLOUDINARY_CLOUD_NAME=${{ secrets.CLOUDINARY_CLOUD_NAME }}" >> .env
