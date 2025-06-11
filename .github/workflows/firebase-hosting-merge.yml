@@ -16,7 +16,7 @@ jobs:
           config --enable-web && flutter pub upgrade
 
       - name: Write firebase_options.dart
-        run: echo "${{ secrets.FIREBASE_OPTIONS }}" | base64 -d > lib/config/firebase_options.dart
+        run: echo "${{ secrets.FIREBASE_OPTIONS }}" | base64 -d > lib/firebase_options.dart
 
       - name: Write google-services.json
         run: echo "${{ secrets.GOOGLE_SERVICES_JSON }}" > android/app/google-services.json
@@ -24,11 +24,11 @@ jobs:
       - name: create and Debug .env file
         run: |
           mkdir -p assets
-          echo "CLOUDINARY_API_KEY=${{ secrets.CLOUDINARY_API_KEY }}" >> assets/.env
-          echo "CLOUDINARY_SECRET_KEY=${{ secrets.CLOUDINARY_SECRET_KEY }}" >> assets/.env
-          echo "CLOUDINARY_CLOUD_NAME=${{ secrets.CLOUDINARY_CLOUD_NAME }}" >> assets/.env
-          ls -la assets
-          cat assets/.env
+          echo "CLOUDINARY_API_KEY=${{ secrets.CLOUDINARY_API_KEY }}" >> .env
+          echo "CLOUDINARY_SECRET_KEY=${{ secrets.CLOUDINARY_SECRET_KEY }}" >> .env
+          echo "CLOUDINARY_CLOUD_NAME=${{ secrets.CLOUDINARY_CLOUD_NAME }}" >> .env
+
+          cat .env
           flutter build web
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
