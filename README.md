@@ -1,16 +1,34 @@
-# instagram
+# Social Media App
 
-A new Flutter project.
+## Running the project with Firebase
 
-## Getting Started
+To use this project with Firebase, follow these steps:
 
-This project is a starting point for a Flutter application.
+- Create a new project with the Firebase console
+- Enable Firebase Authentication, along with the Email/Password Authentication Sign-in provider in the Firebase Console (Authentication > Sign-in method > Email/Password > Edit > Enable > Save)
+- Enable Cloud Firestore
 
-A few resources to get you started if this is your first Flutter project:
+Then, follow one of the two approaches below. 👇
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### 1. Using the CLI
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Make sure you have the Firebase CLI and [FlutterFire CLI](https://pub.dev/packages/flutterfire_cli) installed.
+
+Then run this on the terminal from the root of this project:
+
+- Run `firebase login` so you have access to the Firebase project you have created
+- Run `flutterfire configure` and follow all the steps
+
+
+
+### 2. Manual way (not recommended)
+
+If you don't want to use FlutterFire CLI, follow these steps instead:
+
+- Register separate iOS, Android, and web apps in the Firebase project settings.
+- On Android, use `com.example.starter_architecture_flutter_firebase` as the package name.
+- then, [download and copy](https://firebase.google.com/docs/flutter/setup#configure_an_android_app) `google-services.json` into `android/app`.
+- On iOS, use `com.example.starterArchitectureFlutterFirebase` as the bundle ID.
+- then, [download and copy](https://firebase.google.com/docs/flutter/setup#configure_an_ios_app) `GoogleService-Info.plist` into `iOS/Runner`, and add it to the Runner target in Xcode.
+
+That's it. Have fun!
